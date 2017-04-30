@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+      <title>Collective Textile</title>
+      <meta charset="utf-8">
+      <meta http-equiv="refresh" content="500" >
+  </head>
+
+  <body>
+
+  <table cellpadding="5" cellspacing="5">
+      <tr>
+          <th>Pattern</th>
+          <th>Nick</th>
+      </tr>
+      {% for line in data %}
+        <tr>
+            <th>
+                <img src="static/{{line.name}}" width="600">
+            </th>
+            <th>
+                <a href="/one?id={{line.id}}&num=10">{{line.nickname}}</a>
+            </th>
+        </tr>
+      {% endfor %}
+  </table>
+  <p>
+  <img src="static/complete.png" width="700">
+  </body>
+
+</html>
